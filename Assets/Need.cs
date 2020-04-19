@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-[CreateAssetMenu(fileName = "Need", menuName = "ScriptableObjects/Need", order = 1)]
+[CreateAssetMenu(fileName = "Need", menuName = "Data/Need", order = 1)]
 
 public class Need : ScriptableObject
 {

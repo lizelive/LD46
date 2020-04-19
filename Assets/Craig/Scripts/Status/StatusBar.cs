@@ -7,7 +7,7 @@ namespace Game.Status {
    
     public class StatusBar : MonoBehaviour {
 
-        public Needy Need;
+        public NeedEnum Need;
  
         public const float MaxCapacity = 100;
  

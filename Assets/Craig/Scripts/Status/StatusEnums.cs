@@ -4,7 +4,7 @@ using UnityEngine;
  
 namespace Game.Status {
    
-    public enum Needy
+    public enum NeedEnum
     {
         None,
         Food,

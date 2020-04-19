@@ -196,6 +196,8 @@ public class GrabIt : MonoBehaviour {
 
 	void Rotate()
 	{
+		m_targetRB.transform.up = Vector3.up;
+		/*
 		if(Input.GetKey(m_rotatePitchPosKey)){
 			m_targetRB.AddTorque(  m_transform.right * m_angularSpeed );			
 		}else if(Input.GetKey(m_rotatePitchNegKey)){
@@ -207,6 +209,7 @@ public class GrabIt : MonoBehaviour {
 		}else if(Input.GetKey(m_rotateYawNegKey)){
 			m_targetRB.AddTorque( m_transform.up * m_angularSpeed );
 		}
+		*/
 	}
 	
 	void FixedUpdate()

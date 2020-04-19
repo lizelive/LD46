@@ -11,23 +11,23 @@ namespace Game.Manager {
  
         public List<StatusBar> statusBarsInit;
  
-        public Dictionary<Needy, StatusBar> StatusBars { get; private set; }
+        public Dictionary<NeedEnum, StatusBar> StatusBars { get; private set; }
  
         public int StartingInvincibilityFrames;
  
         public int InvincibilityFrames { get; private set; }
  
-        public static Dictionary<Needy, CauseOfDeath> DeathFromNeed = new Dictionary<Needy, CauseOfDeath>
+        public static Dictionary<NeedEnum, CauseOfDeath> DeathFromNeed = new Dictionary<NeedEnum, CauseOfDeath>
         {
-            { Needy.None, CauseOfDeath.None },
-            { Needy.Food, CauseOfDeath.Starvation },
-            { Needy.Water, CauseOfDeath.Dehydration },
-            { Needy.Sleep, CauseOfDeath.Exhaustion },
-            { Needy.Hygiene, CauseOfDeath.Disease },
-            { Needy.Cleanliness, CauseOfDeath.Disease },
-            { Needy.Entertainment, CauseOfDeath.Boredom },
-            { Needy.WaterPlant, CauseOfDeath.PlantDied },
-            { Needy.SunPlant, CauseOfDeath.PlantDied },
+            { NeedEnum.None, CauseOfDeath.None },
+            { NeedEnum.Food, CauseOfDeath.Starvation },
+            { NeedEnum.Water, CauseOfDeath.Dehydration },
+            { NeedEnum.Sleep, CauseOfDeath.Exhaustion },
+            { NeedEnum.Hygiene, CauseOfDeath.Disease },
+            { NeedEnum.Cleanliness, CauseOfDeath.Disease },
+            { NeedEnum.Entertainment, CauseOfDeath.Boredom },
+            { NeedEnum.WaterPlant, CauseOfDeath.PlantDied },
+            { NeedEnum.SunPlant, CauseOfDeath.PlantDied },
         };
  
         // Use this for initialization
@@ -38,8 +38,8 @@ namespace Game.Manager {
  
         private void InitializeStatusBarMap(){
             // Linq ToDictionary isn't resolving :/.
-            // this.StatusBars = this.statusBarsInit.ToDictionary<Needy, StatusBar>(x => x.Needy);
-            this.StatusBars = new Dictionary<Needy, StatusBar>();
+            // this.StatusBars = this.statusBarsInit.ToDictionary<NeedEnum, StatusBar>(x => x.NeedEnum);
+            this.StatusBars = new Dictionary<NeedEnum, StatusBar>();
             foreach (var statusBar in this.statusBarsInit) {
                 this.StatusBars.Add (statusBar.Need, statusBar);
             }
@@ -83,7 +83,7 @@ namespace Game.Manager {
  
         // Restores capacity to the bar matching the input need. Does not support overfilling.
         // If the input refill amount is null, the bar is restored to its maximum capacity.
-        public void RestoreStatusBarCapacity(Needy need, float? refillAmount) {
+        public void RestoreStatusBarCapacity(NeedEnum need, float? refillAmount) {
             if (this.StatusBars.TryGetValue(need, out var statusBar)) {
                 statusBar.RestoreCapacity(refillAmount);
             }
