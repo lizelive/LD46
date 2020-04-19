@@ -45,9 +45,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Craig\Scripts\Manager\StatusBarManager.cs" />
+     <Compile Include="Assets\Craig\Scripts\Status\StatusBar.cs" />
+     <Compile Include="Assets\Craig\Scripts\Status\StatusEnums.cs" />
      <Compile Include="Assets\Fractal.cs" />
      <Compile Include="Assets\GrabIt\Core\Scripts\GrabIt.cs" />
      <Compile Include="Assets\GrabIt\Demo\Scripts\FreeCam.cs" />
+     <Compile Include="Assets\Need.cs" />
      <Compile Include="Assets\Plant.cs" />
      <Compile Include="Assets\Player.cs" />
      <Compile Include="Assets\PlayerController.cs" />
@@ -663,6 +667,26 @@
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{167d1972-d20a-b1a9-84de-c169d3ccc64c}</Project>
       <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VectorGraphics.csproj">
+      <Project>{bb7b2c96-f92c-94b5-d64e-b3c8800fbce0}</Project>
+      <Name>Unity.VectorGraphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.InternalAPIEditorBridge.003.csproj">
+      <Project>{69fba5e0-0886-c82b-f044-0dee3655a11a}</Project>
+      <Name>Unity.InternalAPIEditorBridge.003</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VectorGraphics.Editor.csproj">
+      <Project>{b265d4de-4e19-52e0-47d1-d8c3eb620214}</Project>
+      <Name>Unity.VectorGraphics.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
+      <Project>{62f8070a-8679-a428-5452-8057550161d8}</Project>
+      <Name>Unity.2D.Sprite.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.InternalAPIEngineBridge.003.csproj">
+      <Project>{9117ea0c-cb6f-ca1d-c8b8-5726b0c28054}</Project>
+      <Name>Unity.InternalAPIEngineBridge.003</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
