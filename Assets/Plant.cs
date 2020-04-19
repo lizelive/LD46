@@ -18,7 +18,6 @@ public class Plant : MonoBehaviour
 
         var changesNeeded = size - plant.Size;
         if(changesNeeded > 0){
-            print($"adding want {size} have {plant.Size}");
             for (int i = 0; i < changesNeeded; i++)
             {
                 plant.Add();
@@ -26,7 +25,6 @@ public class Plant : MonoBehaviour
         }
         if(changesNeeded < 0)
         {
-            print($"removing want {size} have {plant.Size}");
             for (int i = 0; i < -changesNeeded; i++)
             {
                 plant.KillChild();
