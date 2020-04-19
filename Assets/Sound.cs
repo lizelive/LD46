@@ -6,7 +6,7 @@
 public class Sound:ScriptableObject
 {
     public AudioClip clip;
-    public float weight;
-    public float pitch;
-    public float volume;
+    public float weight = 1;
+    public float pitch = 1;
+    public float volume = 1;
 }
