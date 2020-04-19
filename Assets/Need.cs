@@ -6,10 +6,9 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "Need", menuName = "ScriptableObjects/Need", order = 1)]
 
-public class Need2 : ScriptableObject
+public class Need : ScriptableObject
 {
-    public string DisplayName;
+    public string causeOfDeath;
     public Texture2D icon;
-
-
+    public Color color;
 }
