@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   need: {fileID: 11400000, guid: 87a40c2fef128ea4f965200ffe1697c7, type: 2}
-  rate: 1
+  rate: 10
   material: {fileID: 2100000, guid: 1981a06cabb3fb54fb5e2078072894d2, type: 2}
   sound: {fileID: 11400000, guid: ea24a6438658a55818fad2427484da6d, type: 2}
   range: 3

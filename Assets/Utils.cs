@@ -21,11 +21,17 @@ public static class Utils
 
     public static void Satisfy(this Component self, Need need, float amount)
     {
-        var needy = self.GetComponentsInChildren<Needy>().FirstOrDefault(x => x.need == need);
+        var needy = self.GetNeedy(need);
         if (needy)
         {
             needy.Add(amount);
         }
+    }
+
+    
+    public static Needy GetNeedy(this Component self, Need need)
+    {
+        return self.GetComponentsInChildren<Needy>().FirstOrDefault(x => x.need == need);
     }
 }
 
