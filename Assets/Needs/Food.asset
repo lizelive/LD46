@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Food
   m_EditorClassIdentifier: 
   causeOfDeath: starvation
-  icon: {fileID: 2800000, guid: 8e2027b1ada7a3b78a0ba31f1235f56b, type: 3}
+  icon: {fileID: 6192944022281365145, guid: a7fc61d16848bfc4ba1c9da05b6972f0, type: 3}
   color: {r: 1, g: 0.6088143, b: 0, a: 0}

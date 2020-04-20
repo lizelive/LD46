@@ -1,76 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1896628182905577173
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1896628182905577172}
-  - component: {fileID: 1896628182905577174}
-  - component: {fileID: 1896628182905577175}
-  m_Layer: 0
-  m_Name: hand
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1896628182905577172
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1896628182905577173}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 1.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1896628184457715338}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1896628182905577174
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1896628182905577173}
-  serializedVersion: 2
-  m_Mass: 100
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!145 &1896628182905577175
-SpringJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1896628182905577173}
-  m_ConnectedBody: {fileID: 0}
-  m_Anchor: {x: 0, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 0
-  m_ConnectedAnchor: {x: -1.7786541, y: 2.0010126, z: 1.1279987}
-  serializedVersion: 2
-  m_Spring: 1000
-  m_Damper: 100
-  m_MinDistance: 0
-  m_MaxDistance: 0
-  m_Tolerance: 0.025
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
 --- !u!1 &1896628183084926864
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,6 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713d9a30870d153429a146a90af4f218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camAngle: 0
+  maxCameraAngle: 80
   moveSpeed: 4
   turnSpeed: 500
   pov: {fileID: 0}
@@ -220,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pov: {fileID: 1896628184457715339}
-  hand: {fileID: 1896628182905577175}
+  hand: {fileID: 0}
   maxGrabDist: 10
 --- !u!114 &1896628183084926872
 MonoBehaviour:
@@ -5073,8 +5004,7 @@ Transform:
   m_LocalRotation: {x: -0.00012065325, y: -0.00064129254, z: 0.000225772, w: 0.99999976}
   m_LocalPosition: {x: 0, y: 0.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1896628182905577172}
+  m_Children: []
   m_Father: {fileID: 1896628183084926876}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -0.014, y: -0.07300001, z: 0.026}

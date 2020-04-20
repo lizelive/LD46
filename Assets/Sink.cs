@@ -5,8 +5,8 @@ using UnityEngine;
 public class Sink : MonoBehaviour
 {
 
-    public Need provides;
-    public float rate;
+    public Need[] provides;
+    public float rate = 1;
     public SoundEvent sound;
 
     // Start is called before the first frame update
@@ -31,7 +31,9 @@ public class Sink : MonoBehaviour
         var glass = other.GetComponentInParent<Glass>();
                       glass?.Add(ammountWaterGiven);
         
-        other.Satisfy(provides, ammountWaterGiven);
-
+        foreach (var provide in provides)
+        {
+            other.Satisfy(provide, ammountWaterGiven);
+        }
     }
 }

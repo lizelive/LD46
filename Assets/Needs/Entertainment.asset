@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Entertainment
   m_EditorClassIdentifier: 
   causeOfDeath: boredom
-  icon: {fileID: 0}
+  icon: {fileID: 6192944022281365145, guid: c9f499e0e91e69a43b37cb01a73bf33a, type: 3}
   color: {r: 0, g: 0, b: 0, a: 0}

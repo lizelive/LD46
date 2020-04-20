@@ -12,7 +12,7 @@ public class ClickNeedProvider : MonoBehaviour, IClickable
     
     public SoundEvent sound;
     
-    public void Click(Player player)
+    public virtual void Click(Player player)
     {
         var now = Time.time;
         if(cooldownUntil <= now){

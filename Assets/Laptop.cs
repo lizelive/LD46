@@ -21,6 +21,7 @@ public class Laptop : MonoBehaviour, IClickable
         {
             foodArived?.Play(transform.position);
             var food = Instantiate(possibleFood.Choice(), deliveryLocation.position, deliveryLocation.rotation);
+            deliveryCountdown = float.PositiveInfinity;
         }
     }
 

@@ -9,13 +9,12 @@ public class Trashcan : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-
-        var food = collision.collider.GetComponentInParent<Food>()?.gameObject;
+        var food = collision.collider.GetComponentInParent<Garbage>()?.gameObject;
         
-        if(food)
-        Destroy(food);
-
-        sound?.Play(transform.position);
+        if(food){
+            Destroy(food);
+            sound?.Play(transform.position);
+        }
     }
 
     // Start is called before the first frame update

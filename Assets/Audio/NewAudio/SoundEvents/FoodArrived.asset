@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f82ede4473a7d4d91cfcd07fbe9a8e, type: 3}
+  m_Name: FoodArrived
+  m_EditorClassIdentifier: 
+  subtitle: What's in the box?
+  sounds:
+  - {fileID: 11400000, guid: 7f1da4611865a9fb0a778a37bb6be17a, type: 2}
+  - {fileID: 11400000, guid: f9c3deb4091a9c99d9dd524536e9d0a1, type: 2}
+  - {fileID: 11400000, guid: 1f2d123a395a72d31a26c3dc60511736, type: 2}
+  - {fileID: 11400000, guid: 5ee7998caca2fcf2b9b3db8235544dde, type: 2}
+  - {fileID: 11400000, guid: d4cded58f147eec63b41879125391025, type: 2}

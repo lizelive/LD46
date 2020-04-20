@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     CharacterController uwu;
-    float camAngle;
-    float maxCameraAngle = 40;
+    public float camAngle;
+    public float maxCameraAngle = 40;
 
     public float moveSpeed = 3;
     public float turnSpeed = 300;
