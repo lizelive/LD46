@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2da61ba0fc9348578a2243c7dc40b75, type: 3}
+  m_Name: Shower
+  m_EditorClassIdentifier: 
+  subtitle: Thou hast cleansed thyself
+  sounds:
+  - {fileID: 11400000, guid: 9fe280ccdbf0afe1bac6e321ab6561f0, type: 2}
+  - {fileID: 11400000, guid: abf8d027adb49c3458a535a212c25b4d, type: 2}
+  - {fileID: 11400000, guid: 9fef2bde2d6f152f180cc914774b2de3, type: 2}
+  - {fileID: 11400000, guid: d23290c16055b5b8d8a11d3eebaa72ee, type: 2}
+  - {fileID: 11400000, guid: 178382711fad2c4f79a6802b75beb2a8, type: 2}

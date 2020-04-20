@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2da61ba0fc9348578a2243c7dc40b75, type: 3}
+  m_Name: Food
+  m_EditorClassIdentifier: 
+  subtitle: Starvation Satiation
+  sounds:
+  - {fileID: 11400000, guid: 7b321decdf8bc0025b48229ae7215240, type: 2}
+  - {fileID: 11400000, guid: 34391a19888e1790b815d657bc0e347c, type: 2}
+  - {fileID: 11400000, guid: c2f7cdce0c2faaeea985830917084e5a, type: 2}
+  - {fileID: 11400000, guid: 9ccea6630ea3cac0a9ddaceb74c180ac, type: 2}
+  - {fileID: 11400000, guid: 629ba7e105848377cbf2f152cc08e812, type: 2}
+  - {fileID: 11400000, guid: 14d9859326228449a9f6a55ebdbb9a40, type: 2}
+  - {fileID: 11400000, guid: 1a6cd3071a9e1f412a74e3a9708a55a1, type: 2}
+  - {fileID: 11400000, guid: 3c72d0556e3bca868994ed3200396c2b, type: 2}
+  - {fileID: 11400000, guid: fbd8c12c375876ae483d0ba33c5fc3bc, type: 2}
+  - {fileID: 11400000, guid: 86153151e291d8ac998625ec40c6c4b0, type: 2}

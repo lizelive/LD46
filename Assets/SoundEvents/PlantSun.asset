@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2da61ba0fc9348578a2243c7dc40b75, type: 3}
+  m_Name: PlantSun
+  m_EditorClassIdentifier: 
+  subtitle: Your plant has seen the light
+  sounds:
+  - {fileID: 11400000, guid: 3ddd657ad0f6e8b7f8fa0dbfb6b12bcf, type: 2}
+  - {fileID: 11400000, guid: d6a7dce5e2baa34e6ac914f5f468db3d, type: 2}
+  - {fileID: 11400000, guid: bfb9cea4f753f3c5ea5ba1a669dad0bf, type: 2}
