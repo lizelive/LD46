@@ -4,27 +4,30 @@ using UnityEngine;
 
 public class Laptop : MonoBehaviour, IClickable
 {
-    enum OrderStatus
-    {
-        Waiting,
-        Placed    
-    }
-
-
     public Food[] possibleFood;
 
     public Transform deliveryLocation;
-    
-    
+
+
     public SoundEvent orderFood;
     public SoundEvent foodArived;
 
-    public void Click(Player player)
+
+    public float deliveryCountdown = float.PositiveInfinity;
+
+    void Update()
     {
-        orderFood?.Play(transform.position);
+        if ((deliveryCountdown -= Time.deltaTime) <= 0)
+        {
+            foodArived?.Play(transform.position);
+            var food = Instantiate(possibleFood.Choice(), deliveryLocation.position, deliveryLocation.rotation);
+        }
     }
 
 
-    
-
+    public void Click(Player player)
+    {
+        deliveryCountdown = Random.Range(5, 30);
+        orderFood?.Play(transform.position);
+    }
 }

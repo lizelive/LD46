@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Lowscope.Saving;
 using UnityEngine;
 
-public class Needy : MonoBehaviour
+public class Needy : MonoBehaviour, ISaveable
 {
+
+
 
     public static bool Freeze;
     public Need need;
@@ -35,4 +38,29 @@ public SoundEvent thankYou;
         }
 
     }
+
+    #region Save
+    [System.Serializable]
+    public struct SaveData
+    {
+        public float balance;
+    }
+    public string OnSave()
+    {
+        return JsonUtility.ToJson(new SaveData() { balance = this.balance });
+    }
+
+    public void OnLoad(string data)
+    {
+        var save = JsonUtility.FromJson<SaveData>(data);
+        balance = save.balance;
+    }
+    
+    
+    // i don't care about this
+    public bool OnSaveCondition()
+    {
+        return true;
+    }
+    #endregion
 }

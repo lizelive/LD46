@@ -45,6 +45,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Plugins\GrabIt\Core\Scripts\GrabIt.cs" />
+     <Compile Include="Assets\Plugins\GrabIt\Demo\Scripts\FreeCam.cs" />
      <Compile Include="Assets\Plugins\Lowscope\ComponentSaveSystem\Components\SavePosition.cs" />
      <Compile Include="Assets\Plugins\Lowscope\ComponentSaveSystem\Components\SaveRotation.cs" />
      <Compile Include="Assets\Plugins\Lowscope\ComponentSaveSystem\Components\SaveScale.cs" />
