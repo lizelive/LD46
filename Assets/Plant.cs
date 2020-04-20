@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +7,12 @@ public class Plant : MonoBehaviour
 {
     public int size = 1;
     public Fractal plant;
+    
+    public SoundEvent thankYou;
+public AnimationCurve curve;
+
+
+    public Needy water;
 
     // Update is called once per frame
     void Update()
@@ -30,11 +37,10 @@ public class Plant : MonoBehaviour
                 plant.KillChild();
             }
         }
+    }
 
-        //print($"eof have {size} but want {plant.Size}");
-
-
-        
-
+    internal void Water(float ammountWaterGiven)
+    {
+        water.Add(ammountWaterGiven);
     }
 }

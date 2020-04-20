@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +12,16 @@ public class Needy : MonoBehaviour
     public float maxValue = 100;
     public float baseRateOfDecay = 1;
     public float RateOfDecay => baseRateOfDecay;
+
+public SoundEvent thankYou;
+
+    public void Add(float ammount){
+        if(ammount>0){
+            thankYou?.Play(transform.position);
+        }
+
+        balance =  Mathf.Min(balance + ammount, maxValue); 
+    }
 
     void Update(){
         if(Freeze)

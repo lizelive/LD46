@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2542355233101351503}
   - component: {fileID: 2542355233101351501}
   - component: {fileID: 2542355233101351504}
+  - component: {fileID: 1395824535}
   m_Layer: 0
   m_Name: Plant
   m_TagString: Untagged
@@ -66,6 +67,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: 10
   plant: {fileID: 86361091690044635}
+  thankYou: {fileID: 11400000, guid: 9ceece55e7070a44aa8877c8fa50fac5, type: 2}
+  water: {fileID: 1395824535}
 --- !u!65 &2542355233101351501
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -92,6 +95,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightValue: 0
+  sunlightNeed: 0.7
+  sunWeight: 100
+  minDist: 0.2
+  maxDist: 1000
+--- !u!114 &1395824535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2542355233101351499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d21b12e60097eb245a62aec9b86038b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  need: {fileID: 11400000, guid: c67fa7152ff09cd40bef0ffb4c235d04, type: 2}
+  balance: 50
+  maxValue: 100
+  baseRateOfDecay: 1
 --- !u!1001 &2542355232319434594
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -49,11 +49,15 @@
      <Compile Include="Assets\Craig\Scripts\Manager\StatusBarManager.cs" />
      <Compile Include="Assets\Craig\Scripts\Status\StatusBar.cs" />
      <Compile Include="Assets\Craig\Scripts\Status\StatusEnums.cs" />
+     <Compile Include="Assets\Food.cs" />
      <Compile Include="Assets\Fractal.cs" />
      <Compile Include="Assets\Glass.cs" />
      <Compile Include="Assets\GrabIt\Core\Scripts\GrabIt.cs" />
      <Compile Include="Assets\GrabIt\Demo\Scripts\FreeCam.cs" />
+     <Compile Include="Assets\IClickable.cs" />
      <Compile Include="Assets\IEatSun.cs" />
+     <Compile Include="Assets\Inman.cs" />
+     <Compile Include="Assets\Laptop.cs" />
      <Compile Include="Assets\Need.cs" />
      <Compile Include="Assets\Needy.cs" />
      <Compile Include="Assets\Plant.cs" />

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21a54ae8468045b47a70fd2c984bd2c8, type: 3}
-  m_Name: watersounds
+  m_Name: splissplasspash
   m_EditorClassIdentifier: 
-  clip: {fileID: 0}
-  weight: 1
+  clip: {fileID: 8300000, guid: 621d6216c0b7d774aa2d8550d200bf58, type: 3}
+  weight: 213
   pitch: 1
   volume: 1
