@@ -9,14 +9,17 @@ public class ClickNeedProvider : MonoBehaviour, IClickable
     public float cooldownLength = 1;
     
     public float cooldownUntil;
-
-
+    
+    public SoundEvent sound;
+    
     public void Click(Player player)
     {
         var now = Time.time;
         if(cooldownUntil <= now){
             player.gameObject.Satisfy(need, value);
             cooldownUntil = now + cooldownLength;
+
+            sound?.Play(transform.position);
         }
     }
 }

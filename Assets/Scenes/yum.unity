@@ -6311,6 +6311,7 @@ MonoBehaviour:
   value: 10
   cooldownLength: 1
   cooldownUntil: 0
+  sound: {fileID: 11400000, guid: 66eceb763a58ef234bfc00b288b1164b, type: 2}
 --- !u!1 &1965085296
 GameObject:
   m_ObjectHideFlags: 0
@@ -6389,11 +6390,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1395824535, guid: f27d80c8e76c13b4798176f28140b2f5, type: 3}
-      propertyPath: thankYou
-      value: 
-      objectReference: {fileID: 11400000, guid: 9ceece55e7070a44aa8877c8fa50fac5,
-        type: 2}
     - target: {fileID: 2542355233101351499, guid: f27d80c8e76c13b4798176f28140b2f5,
         type: 3}
       propertyPath: m_Name

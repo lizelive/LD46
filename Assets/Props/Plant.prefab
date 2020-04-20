@@ -67,7 +67,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: 10
   plant: {fileID: 86361091690044635}
-  thankYou: {fileID: 11400000, guid: 9ceece55e7070a44aa8877c8fa50fac5, type: 2}
+  thankYou: {fileID: 0}
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   water: {fileID: 1395824535}
 --- !u!65 &2542355233101351501
 BoxCollider:
@@ -115,6 +121,8 @@ MonoBehaviour:
   balance: 50
   maxValue: 100
   baseRateOfDecay: 1
+  lowThreshold: 0.3
+  thankYou: {fileID: 11400000, guid: 1a0bd8d8a8ce22a87b5a029b68144ec2, type: 2}
 --- !u!1001 &2542355232319434594
 PrefabInstance:
   m_ObjectHideFlags: 0
