@@ -19,7 +19,8 @@ public static class Utils
     }
 
 
-    public static void Satisfy(this Component self, Need need, float amount)
+
+    public static void Satisfy(this GameObject self, Need need, float amount)
     {
         var needy = self.GetNeedy(need);
         if (needy)
@@ -29,9 +30,20 @@ public static class Utils
     }
 
     
-    public static Needy GetNeedy(this Component self, Need need)
+    public static Needy GetNeedy(this GameObject self, Need need)
     {
         return self.GetComponentsInChildren<Needy>().FirstOrDefault(x => x.need == need);
+    }
+
+    public static void Satisfy(this Component self, Need need, float amount)
+    {
+        self.gameObject.Satisfy(need, amount);
+    }
+
+    
+    public static Needy GetNeedy(this Component self, Need need)
+    {
+        return self.gameObject.GetNeedy(need);
     }
 }
 
