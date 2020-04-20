@@ -188,6 +188,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4821082238091233832, guid: 6af3d32f5dd1488438de457704d64ff6,
+        type: 3}
+      propertyPath: saveIdentification
+      value: SampleScene-Trashcan-46e3c
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821082238091233832, guid: 6af3d32f5dd1488438de457704d64ff6,
+        type: 3}
+      propertyPath: sceneName
+      value: SampleScene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6af3d32f5dd1488438de457704d64ff6, type: 3}
 --- !u!1001 &128532891
@@ -731,6 +741,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1822966657091974206, guid: ff7540e026e035a8a9466578c4e0934f,
+        type: 3}
+      propertyPath: saveIdentification
+      value: SampleScene-Laptop-2d781
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822966657091974206, guid: ff7540e026e035a8a9466578c4e0934f,
+        type: 3}
+      propertyPath: sceneName
+      value: SampleScene
+      objectReference: {fileID: 0}
     - target: {fileID: 6597727307852861811, guid: ff7540e026e035a8a9466578c4e0934f,
         type: 3}
       propertyPath: m_Name
@@ -793,75 +813,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9206636127629579014, guid: ff7540e026e035a8a9466578c4e0934f,
         type: 3}
-      propertyPath: possibleFood.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9206636127629579014, guid: ff7540e026e035a8a9466578c4e0934f,
-        type: 3}
       propertyPath: deliveryLocation
       value: 
       objectReference: {fileID: 1401407193}
-    - target: {fileID: 9206636127629579014, guid: ff7540e026e035a8a9466578c4e0934f,
-        type: 3}
-      propertyPath: possibleFood.Array.data[0]
-      value: 
-      objectReference: {fileID: 4002150743806111542, guid: 38cb086956348b348ac4a83649f79b99,
-        type: 3}
-    - target: {fileID: 9206636127629579014, guid: ff7540e026e035a8a9466578c4e0934f,
-        type: 3}
-      propertyPath: orderFood
-      value: 
-      objectReference: {fileID: 11400000, guid: 47b10480de7418d75a38add36077016c,
-        type: 2}
-    - target: {fileID: 9206636127629579014, guid: ff7540e026e035a8a9466578c4e0934f,
-        type: 3}
-      propertyPath: foodArived
-      value: 
-      objectReference: {fileID: 11400000, guid: 149f6cf8cb6f9101a95f225c95672dff,
-        type: 2}
-    - target: {fileID: 9206636127629579014, guid: ff7540e026e035a8a9466578c4e0934f,
-        type: 3}
-      propertyPath: possibleFood.Array.data[1]
-      value: 
-      objectReference: {fileID: 4002150743806111542, guid: 38cb086956348b348ac4a83649f79b99,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff7540e026e035a8a9466578c4e0934f, type: 3}
---- !u!1 &1225659894 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6597727307852861811, guid: ff7540e026e035a8a9466578c4e0934f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1225659893}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &1225659895
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1225659894}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &1225659896
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1225659894}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.3, z: 0.55}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1401407192
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,7 +829,7 @@ GameObject:
   - component: {fileID: 1401407193}
   m_Layer: 0
   m_Name: delivery
-  m_TagString: Untagged
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

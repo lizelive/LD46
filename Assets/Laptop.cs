@@ -5,10 +5,6 @@ using UnityEngine;
 public class Laptop : MonoBehaviour, IClickable
 {
     public Food[] possibleFood;
-
-    public Transform deliveryLocation;
-
-
     public SoundEvent orderFood;
     public SoundEvent foodArived;
 
@@ -19,6 +15,9 @@ public class Laptop : MonoBehaviour, IClickable
     {
         if ((deliveryCountdown -= Time.deltaTime) <= 0)
         {
+            var deliveryLocation = GameObject.FindGameObjectsWithTag("Delivery").Choice().transform;
+
+
             foodArived?.Play(transform.position);
             var food = Instantiate(possibleFood.Choice(), deliveryLocation.position, deliveryLocation.rotation);
             deliveryCountdown = float.PositiveInfinity;
