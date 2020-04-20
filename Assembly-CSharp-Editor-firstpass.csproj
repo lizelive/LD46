@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{55bcdfb1-c295-7890-623f-d1a132b80019}</ProjectGuid>
+    <ProjectGuid>{931abc53-f94c-cf98-e3bb-87aaf44ae51a}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor-firstpass</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -45,31 +45,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\ClickNeedProvider.cs" />
-     <Compile Include="Assets\Craig\Scripts\Manager\StatusBarManager.cs" />
-     <Compile Include="Assets\Craig\Scripts\Status\StatusBar.cs" />
-     <Compile Include="Assets\Craig\Scripts\Status\StatusEnums.cs" />
-     <Compile Include="Assets\Food.cs" />
-     <Compile Include="Assets\Fractal.cs" />
-     <Compile Include="Assets\Glass.cs" />
-     <Compile Include="Assets\GrabIt\Core\Scripts\GrabIt.cs" />
-     <Compile Include="Assets\GrabIt\Demo\Scripts\FreeCam.cs" />
-     <Compile Include="Assets\IClickable.cs" />
-     <Compile Include="Assets\IEatSun.cs" />
-     <Compile Include="Assets\Inman.cs" />
-     <Compile Include="Assets\Laptop.cs" />
-     <Compile Include="Assets\Need.cs" />
-     <Compile Include="Assets\Needy.cs" />
-     <Compile Include="Assets\Plant.cs" />
-     <Compile Include="Assets\Player.cs" />
-     <Compile Include="Assets\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
-     <Compile Include="Assets\ShowNeeds.cs" />
-     <Compile Include="Assets\Sink.cs" />
-     <Compile Include="Assets\Sound.cs" />
-     <Compile Include="Assets\SoundEvent.cs" />
-     <Compile Include="Assets\Sun.cs" />
-     <Compile Include="Assets\Utils.cs" />
+     <Compile Include="Assets\Plugins\Lowscope\ComponentSaveSystem\Editor\SaveMenuCommands.cs" />
+     <Compile Include="Assets\Plugins\Lowscope\ComponentSaveSystem\Editor\SaveableInspector.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -252,6 +229,27 @@
  </Reference>
  <Reference Include="UnityEditor">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.10f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.VR">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.10f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.10f1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WebGL.Extensions">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.10f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.LinuxStandalone.Extensions">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.10f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="ICSharpCode.NRefactory">
+ <HintPath>C:/Users/Lize/source/repos/LD46/LD46/Library/PackageCache/com.unity.render-pipelines.core@7.3.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+ </Reference>
+ <Reference Include="nunit.framework">
+ <HintPath>C:/Users/Lize/source/repos/LD46/LD46/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -612,6 +610,14 @@
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{0bd7d2c1-8caf-5501-ca99-aee79b569ced}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.TestRunner.csproj">
+      <Project>{bae782b4-52d9-bc70-fba2-ef29a3eb8544}</Project>
+      <Name>UnityEditor.TestRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.TestRunner.csproj">
+      <Project>{9aea2dfe-18ec-b984-aba1-69d78d902a78}</Project>
+      <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
       <Project>{465f28df-5994-9c99-06d0-643f5bef1098}</Project>
