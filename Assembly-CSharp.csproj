@@ -349,6 +349,12 @@
  <Reference Include="UnityEngine.XRModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
  </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>C:/Users/Lize/source/repos/LD46/LD46/Assets/Plugins/MixerInteractive/Source/DLLs/Win32/Newtonsoft.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="websocket-sharp">
+ <HintPath>C:/Users/Lize/source/repos/LD46/LD46/Assets/Plugins/MixerInteractive/Source/DLLs/Win32/websocket-sharp.dll</HintPath>
+ </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
  </Reference>

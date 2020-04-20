@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b06427bcc2823a45b258de4548361b7, type: 3}
   m_Name: Water
   m_EditorClassIdentifier: 
-  causeOfDeath: dehydration
+  causeOfDeath: plant dehydration
   icon: {fileID: 6192944022281365145, guid: 62972530d96abcf4393fc84200eae047, type: 3}
   color: {r: 0, g: 0.26824474, b: 1, a: 1}

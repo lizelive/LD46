@@ -88,6 +88,8 @@ public class GrabIt : MonoBehaviour {
 	
 	void Update()
 	{
+		if (!m_targetRB)
+			m_grabbing = false;
 		if( m_grabbing )
 		{
 

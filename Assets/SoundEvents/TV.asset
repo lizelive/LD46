@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f82ede4473a7d4d91cfcd07fbe9a8e, type: 3}
+  m_Name: TV
+  m_EditorClassIdentifier: 
+  subtitle: we're listening, are you?
+  sounds:
+  - {fileID: 11400000, guid: 6ea24278736451f438382227371bf9ae, type: 2}
+  - {fileID: 11400000, guid: 71034b5c4236bdf438e7d23beea428e2, type: 2}
+  - {fileID: 11400000, guid: 06023c7b4dcbd0d468f09e6e334d4644, type: 2}
+  - {fileID: 11400000, guid: 52fe6527fa8234b42bc33f8fc1da757f, type: 2}
+  - {fileID: 11400000, guid: 35ccac880ea6cde4388677edf9cd3487, type: 2}
+  - {fileID: 11400000, guid: 29cff5e849ca2514a806ed5d09599f26, type: 2}
+  - {fileID: 11400000, guid: b99f6436dda18354e8af08594d8a5aa7, type: 2}
+  - {fileID: 11400000, guid: 873e012e8032ee84a9f227aa120ee182, type: 2}
+  - {fileID: 11400000, guid: ca3002addfdb09e4cb94e9b29466fb37, type: 2}
+  - {fileID: 11400000, guid: e87f5328275023e4a89be987a71fd78c, type: 2}
+  - {fileID: 11400000, guid: 7c8f61c648a11b349b8db39ccb4dd592, type: 2}

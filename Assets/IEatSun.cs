@@ -54,6 +54,7 @@ public class IEatSun : MonoBehaviour
         var emission = sunParticles.emission;
         emission.enabled = inSun;
 
+        /*
         LightProbes.GetInterpolatedProbe(transform.position, null, out var sh2);
         var dirs = new[] { Vector3.down, Vector3.up, Vector3.left, Vector3.right, Vector3.forward, Vector3.back };
         var colors = new Color[dirs.Length];
@@ -64,7 +65,7 @@ public class IEatSun : MonoBehaviour
         {
             thankYou?.Play(transform.position);
         }
-        
+        */
         need.Add(iEats * Time.deltaTime);
 
         lightValue = iEats;

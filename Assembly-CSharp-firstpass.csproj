@@ -72,7 +72,54 @@
      <Compile Include="Assets\Plugins\Lowscope\ComponentSaveSystem\Interfaces\ISaveable.cs" />
      <Compile Include="Assets\Plugins\Lowscope\ComponentSaveSystem\SaveMaster.cs" />
      <Compile Include="Assets\Plugins\Lowscope\ValidateHierarchy\ValidateHierarchy.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Examples\Basic\ConnectionStatus.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Examples\Basic\InteractivityToggle.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Examples\Buttons\HealthValue.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Examples\Groups\Groups.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Examples\Joysticks\Move.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Examples\Throttling input, disabling and setting progress\DisableButtonLogic.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Examples\Throttling input, disabling and setting progress\SetProgressLogic.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Examples\Throttling input, disabling and setting progress\TriggerCooldownLogic.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Examples\Viewer controls a character\ControlCharacter.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\DLLs\Websocket.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractiveButtonControl.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractiveButtonEventArgs.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractiveControl.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractiveControlProperty.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractiveCoordinatesChangedEventArgs.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractiveEventArgs.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractiveEventType.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractiveGroup.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractiveJoystickControl.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractiveJoystickEventArgs.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractiveLabelControl.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractiveMessageEventArgs.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractiveMouseButtonEventArgs.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractiveParticipant.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractiveParticipantJoinEventArgs.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractiveParticipantLeaveEventArgs.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractiveParticipantState.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractiveParticipantStateChangeEventArgs.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractiveScene.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractiveTextControl.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractiveTextEventArgs.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractiveTextResult.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractivityManager.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractivityState.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\InteractivityStateChangedEventArgs.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\LoggingLevel.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\MixerInteractive.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\MixerInteractiveDialog.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Scripts\MixerInteractiveHelper.cs" />
+     <None Include="Assets\Plugins\MixerInteractive\Examples\Buttons\Instructions.txt" />
+     <None Include="Assets\Plugins\MixerInteractive\Source\DLLs\UWP\Newtonsoft.Json.xml" />
+     <None Include="Assets\Plugins\MixerInteractive\Examples\Viewer controls a character\Instructions.txt" />
+     <None Include="Assets\Plugins\MixerInteractive\Readme.txt" />
+     <None Include="Assets\Plugins\MixerInteractive\Examples\Joysticks\Instructions.txt" />
      <None Include="Assets\Plugins\Lowscope\ComponentSaveSystem\LICENSE.txt" />
+     <None Include="Assets\Plugins\MixerInteractive\Examples\Throttling input, disabling and setting progress\Instructions.txt" />
+     <None Include="Assets\Plugins\MixerInteractive\Examples\Groups\Instructions.txt" />
+     <None Include="Assets\Plugins\MixerInteractive\Examples\Basic\Instructions.txt" />
  <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
  <HintPath>C:/Users/Lize/source/repos/LD46/LD46/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
  </Reference>
@@ -318,6 +365,12 @@
  </Reference>
  <Reference Include="UnityEngine.XRModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>C:/Users/Lize/source/repos/LD46/LD46/Assets/Plugins/MixerInteractive/Source/DLLs/Win32/Newtonsoft.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="websocket-sharp">
+ <HintPath>C:/Users/Lize/source/repos/LD46/LD46/Assets/Plugins/MixerInteractive/Source/DLLs/Win32/websocket-sharp.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

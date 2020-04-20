@@ -9,7 +9,7 @@ public class Needy : MonoBehaviour, ISaveable
 
 
 
-    public static bool Freeze;
+    public bool Freeze;
     public Need need;
     public float balance = 50;
     public float maxValue = 100;

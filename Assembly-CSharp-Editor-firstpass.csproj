@@ -57,6 +57,9 @@
   <ItemGroup>
      <Compile Include="Assets\Plugins\Lowscope\ComponentSaveSystem\Editor\SaveMenuCommands.cs" />
      <Compile Include="Assets\Plugins\Lowscope\ComponentSaveSystem\Editor\SaveableInspector.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Editor\InteractiveManagerEditor.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Editor\InteractivePlugin.cs" />
+     <Compile Include="Assets\Plugins\MixerInteractive\Source\Editor\InteractiveSettingsWindow.cs" />
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>C:/Users/Lize/source/repos/LD46/LD46/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
@@ -326,6 +329,12 @@
  </Reference>
  <Reference Include="ICSharpCode.NRefactory">
  <HintPath>C:/Users/Lize/source/repos/LD46/LD46/Library/PackageCache/com.unity.render-pipelines.core@7.3.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>C:/Users/Lize/source/repos/LD46/LD46/Assets/Plugins/MixerInteractive/Source/DLLs/Win32/Newtonsoft.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="websocket-sharp">
+ <HintPath>C:/Users/Lize/source/repos/LD46/LD46/Assets/Plugins/MixerInteractive/Source/DLLs/Win32/websocket-sharp.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>C:/Users/Lize/source/repos/LD46/LD46/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b06427bcc2823a45b258de4548361b7, type: 3}
   m_Name: Sunlight
   m_EditorClassIdentifier: 
-  causeOfDeath: darkness
+  causeOfDeath: plant sunlight
   icon: {fileID: 6192944022281365145, guid: fab8e1df3d55d294abca25685dd23408, type: 3}
   color: {r: 1, g: 0.997108, b: 0, a: 1}

@@ -18,7 +18,7 @@ MonoBehaviour:
   useJsonPrettyPrint: 1
   maxSaveSlotCount: 300
   trackTimePlayed: 1
-  autoSaveOnExit: 1
+  autoSaveOnExit: 0
   autoSaveOnSlotSwitch: 1
   resetSaveableIdOnDuplicate: 1
   resetSaveableIdOnNewScene: 0

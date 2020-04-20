@@ -4806,7 +4806,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 40
+  m_AngularDrag: 0.5
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -4882,6 +4882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21b12e60097eb245a62aec9b86038b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Freeze: 0
   need: {fileID: 11400000, guid: c67fa7152ff09cd40bef0ffb4c235d04, type: 2}
   balance: 50
   maxValue: 100
@@ -4900,6 +4901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21b12e60097eb245a62aec9b86038b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Freeze: 0
   need: {fileID: 11400000, guid: 47e5be8f4295d5b47a3cad2a377ecfc0, type: 2}
   balance: 50
   maxValue: 100
