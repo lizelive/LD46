@@ -14,6 +14,13 @@ public float sunWeight = 100f;
 public float minDist = 0.2f;
 public float maxDist = 1000;
 
+
+public Needy need;
+
+public SoundEvent thankYou;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +29,7 @@ public float maxDist = 1000;
     // Update is called once per frame
     void Update()
     {
+
 
         var iEats = 0f;
         var sun = RenderSettings.sun;
@@ -36,6 +44,10 @@ public float maxDist = 1000;
         var colors = new Color[dirs.Length];
         sh2.Evaluate(dirs, colors);
         iEats += colors.Average(it=> it.grayscale);
+
+        if(lightValue + 0.04f< iEats){
+            thankYou?.Play(transform.position);
+        }
 
         lightValue = iEats;
     }

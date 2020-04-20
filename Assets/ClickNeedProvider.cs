@@ -16,7 +16,7 @@ public class ClickNeedProvider : MonoBehaviour, IClickable
     {
         var now = Time.time;
         if(cooldownUntil <= now){
-            player.gameObject.Satisfy(need, value);
+            player.Satisfy(need, value);
             cooldownUntil = now + cooldownLength;
 
             sound?.Play(transform.position);

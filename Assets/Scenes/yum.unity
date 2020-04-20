@@ -6131,7 +6131,31 @@ MonoBehaviour:
   maxValue: 100
   baseRateOfDecay: 1
   lowThreshold: 0.3
-  thankYou: {fileID: 0}
+  thankYou: {fileID: 11400000, guid: 66eceb763a58ef234bfc00b288b1164b, type: 2}
+--- !u!1 &1395824534 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2542355233101351499, guid: f27d80c8e76c13b4798176f28140b2f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 2542355233589564224}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1395824535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395824534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d21b12e60097eb245a62aec9b86038b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  need: {fileID: 11400000, guid: 47e5be8f4295d5b47a3cad2a377ecfc0, type: 2}
+  balance: 50
+  maxValue: 100
+  baseRateOfDecay: 1
+  lowThreshold: 0.3
+  thankYou: {fileID: 11400000, guid: 1e857b2de4c49b65bb5acf6acc639548, type: 2}
 --- !u!1001 &1424517943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6229,7 +6253,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804376662}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -6304,14 +6328,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1804376662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3cef6fc3773a5547a691f00cff30a8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 88414ab2559ae3c4489039a3e38357eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  need: {fileID: 11400000, guid: e5106e86c22b65f4b9bae3e7f8b1a810, type: 2}
-  value: 10
-  cooldownLength: 1
-  cooldownUntil: 0
-  sound: {fileID: 11400000, guid: 66eceb763a58ef234bfc00b288b1164b, type: 2}
+  provides: {fileID: 11400000, guid: e5106e86c22b65f4b9bae3e7f8b1a810, type: 2}
+  rate: 1
+  sound: {fileID: 0}
 --- !u!1 &1965085296
 GameObject:
   m_ObjectHideFlags: 0

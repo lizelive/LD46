@@ -17,11 +17,8 @@ private float nextPossiblePlayTime;
     public void Play(Vector3 position, float volume = 1, float pitch = 1){
         if(nextPossiblePlayTime > Time.time) return;
         var toPlay = GetSoundToPlay();
-        
-        Debug.Log($"play {name} {position}");
 
         if(!toPlay){
-            Debug.LogWarning("No sound to play");
             return;
         }
         nextPossiblePlayTime= Time.time + toPlay.clip.length;

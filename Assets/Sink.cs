@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class Sink : MonoBehaviour
 {
+
+    public Need provides;
     public float rate;
+    public SoundEvent sound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,15 +23,15 @@ public class Sink : MonoBehaviour
 
         void OnTriggerStay(Collider other)
     {
+                    sound?.Play(transform.position);
+
         var ammountWaterGiven = Time.fixedDeltaTime * rate;
 
 
         var glass = other.GetComponentInParent<Glass>();
                       glass?.Add(ammountWaterGiven);
         
-        var plant = other.GetComponentInParent<Plant>();
-
-        plant?.Water(ammountWaterGiven);
+        other.Satisfy(provides, ammountWaterGiven);
 
     }
 }

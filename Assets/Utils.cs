@@ -19,7 +19,7 @@ public static class Utils
     }
 
 
-    public static void Satisfy(this GameObject self, Need need, float amount)
+    public static void Satisfy(this Component self, Need need, float amount)
     {
         var needy = self.GetComponentsInChildren<Needy>().FirstOrDefault(x => x.need == need);
         if (needy)
