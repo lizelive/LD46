@@ -13,6 +13,8 @@ public class Needy : MonoBehaviour
     public float baseRateOfDecay = 1;
     public float RateOfDecay => baseRateOfDecay;
 
+    public float lowThreshold = 0.3f;
+
 public SoundEvent thankYou;
 
     public void Add(float ammount){
