@@ -8,6 +8,8 @@ public class IEatSun : MonoBehaviour
     public float lightValue;
 
 
+
+public LayerMask layerMask;
 public float sunlightNeed  = 0.7f;
 
 public float sunWeight = 100f;
@@ -34,8 +36,17 @@ public SoundEvent thankYou;
         var iEats = 0f;
         var sun = RenderSettings.sun;
         var castDir = -sun.transform.forward;
-        if(!Physics.Raycast(transform.position+castDir*minDist, castDir, maxDist)){
+
+        var start = transform.position+castDir*minDist;
+        var end = start + castDir*maxDist;
+
+        if(!Physics.Raycast(start, castDir, maxDist, layerMask.value)){
             iEats += sun.intensity * sunWeight;
+
+        }
+        else{
+                                Debug.DrawLine(start, end, Color.red);
+
         }
 
 

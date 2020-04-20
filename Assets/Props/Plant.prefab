@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 2542355233101351504}
   - component: {fileID: 1395824535}
   - component: {fileID: 8515857968877671825}
-  - component: {fileID: 2783909980477127582}
   - component: {fileID: 1395824540}
   - component: {fileID: 1395824539}
   - component: {fileID: 1395824538}
@@ -106,11 +105,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightValue: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
   sunlightNeed: 0.7
   sunWeight: 100
-  minDist: 0.2
-  maxDist: 1000
-  need: {fileID: 0}
+  minDist: 0
+  maxDist: 0
+  need: {fileID: 8515857968877671825}
   thankYou: {fileID: 11400000, guid: 1e857b2de4c49b65bb5acf6acc639548, type: 2}
 --- !u!114 &1395824535
 MonoBehaviour:
@@ -148,24 +150,6 @@ MonoBehaviour:
   baseRateOfDecay: 1
   lowThreshold: 0.3
   thankYou: {fileID: 0}
---- !u!114 &2783909980477127582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2542355233101351499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d21b12e60097eb245a62aec9b86038b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  need: {fileID: 11400000, guid: 47e5be8f4295d5b47a3cad2a377ecfc0, type: 2}
-  balance: 50
-  maxValue: 100
-  baseRateOfDecay: 1
-  lowThreshold: 0.3
-  thankYou: {fileID: 0}
 --- !u!114 &1395824540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,8 +170,6 @@ MonoBehaviour:
     monoBehaviour: {fileID: 1395824535}
   - identifier: Needy-aa51d
     monoBehaviour: {fileID: 8515857968877671825}
-  - identifier: Needy-6aa55
-    monoBehaviour: {fileID: 2783909980477127582}
   - identifier: SavePosition-c64f1
     monoBehaviour: {fileID: 1395824539}
   - identifier: SaveRotation-14935
