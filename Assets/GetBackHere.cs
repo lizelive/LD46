@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NeedViz : MonoBehaviour
+public class GetBackHere : MonoBehaviour
 {
-    public GameObject target;
     // Start is called before the first frame update
     void Start()
     {

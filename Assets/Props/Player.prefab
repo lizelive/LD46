@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 1896628183084926949}
   - component: {fileID: 1896628183084926874}
   - component: {fileID: 1896628183084926875}
+  - component: {fileID: 8211772925618881364}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -193,6 +194,8 @@ MonoBehaviour:
     monoBehaviour: {fileID: 1896628183084926874}
   - identifier: SavePosition-0db98
     monoBehaviour: {fileID: 1896628183084926875}
+  - identifier: Needy-b08ef
+    monoBehaviour: {fileID: 8211772925618881364}
   saveIdentification: 
   sceneName: 
 --- !u!114 &1896628183084926874
@@ -219,6 +222,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d2c7167844c4a445b275f02764b1d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8211772925618881364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896628183084926864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d21b12e60097eb245a62aec9b86038b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  need: {fileID: 11400000, guid: 87a40c2fef128ea4f965200ffe1697c7, type: 2}
+  balance: 50
+  maxValue: 100
+  baseRateOfDecay: 1
+  lowThreshold: 0.3
+  thankYou: {fileID: 0}
 --- !u!1 &1896628183907466909
 GameObject:
   m_ObjectHideFlags: 0

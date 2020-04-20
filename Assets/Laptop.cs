@@ -27,7 +27,11 @@ public class Laptop : MonoBehaviour, IClickable
 
     public void Click(Player player)
     {
-        deliveryCountdown = Random.Range(5, 30);
-        orderFood?.Play(transform.position);
+        if (float.IsPositiveInfinity(deliveryCountdown))
+        {
+            orderFood?.Play(transform.position);
+            deliveryCountdown = Random.Range(5, 30);
+        }
+
     }
 }
