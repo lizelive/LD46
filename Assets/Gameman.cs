@@ -16,7 +16,21 @@ public class Gameman : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        var allTheNeeds = GameObject.FindObjectsOfType<Needy>();
+
+        var failed = false;
+
+        foreach (var need in allTheNeeds)
+        {
+            if(need.balance <= 0)
+            {
+                failed = true;
+                SaveMaster.SyncLoad();
+            }
+        }
+
+
         if(Input.GetKeyDown(KeyCode.F5)){
             SaveMaster.SyncSave();
         }

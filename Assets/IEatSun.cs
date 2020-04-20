@@ -7,7 +7,6 @@ public class IEatSun : MonoBehaviour
 {
     public float lightValue;
 
-
     public ParticleSystem sunParticles;
 
     public LayerMask layerMask;
@@ -65,6 +64,8 @@ public class IEatSun : MonoBehaviour
         {
             thankYou?.Play(transform.position);
         }
+        
+        need.Add(iEats * Time.deltaTime);
 
         lightValue = iEats;
     }

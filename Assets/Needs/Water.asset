@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Water
   m_EditorClassIdentifier: 
   causeOfDeath: dehydration
-  icon: {fileID: 2800000, guid: 159bb5862c399c97d815b3e6a66d50e8, type: 3}
-  color: {r: 0, g: 0.26824474, b: 1, a: 0}
+  icon: {fileID: 6192944022281365145, guid: 62972530d96abcf4393fc84200eae047, type: 3}
+  color: {r: 0, g: 0.26824474, b: 1, a: 1}

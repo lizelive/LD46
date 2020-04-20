@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   causeOfDeath: disease
   icon: {fileID: 6192944022281365145, guid: 3eaaf0be8c21dc44ca01e216390c1d8a, type: 3}
-  color: {r: 0, g: 0, b: 0, a: 0}
+  color: {r: 0.4633216, g: 0.6603774, b: 0.16197935, a: 1}
