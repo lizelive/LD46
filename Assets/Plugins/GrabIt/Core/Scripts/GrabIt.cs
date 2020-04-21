@@ -68,7 +68,7 @@ public class GrabIt : MonoBehaviour {
 	GameObject m_hitPointObject;
 	float m_targetDistance;
 
-	bool m_grabbing = false;
+	public bool m_grabbing = false;
 	bool m_applyImpulse = false;
 	bool m_isHingeJoint = false;
 
@@ -111,7 +111,7 @@ public class GrabIt : MonoBehaviour {
 				Reset();
 				m_grabbing = false;
 			}else if ( Input.GetMouseButtonDown(1) ){
-				m_applyImpulse = true;
+				//m_applyImpulse = true;
 			}
 
 			
@@ -141,6 +141,10 @@ public class GrabIt : MonoBehaviour {
 			return;
 		}
 
+		if (m_hitPointObject == null){
+			m_hitPointObject = new GameObject("Point");
+		}
+
 		m_targetRB = target;
 		m_isHingeJoint = target.GetComponent<HingeJoint>() != null;		
 
@@ -156,7 +160,6 @@ public class GrabIt : MonoBehaviour {
 		m_targetRB.angularDrag = m_grabProperties.m_angularDrag;
 		m_targetRB.constraints = m_isHingeJoint? RigidbodyConstraints.None : m_grabProperties.m_constraints;
 		
-		
 		m_hitPointObject.transform.SetParent(target.transform);							
 
 		m_targetDistance = distance;
@@ -164,7 +167,6 @@ public class GrabIt : MonoBehaviour {
 
 		m_hitPointObject.transform.position = m_targetPos;
 		m_hitPointObject.transform.LookAt(m_transform);
-				
 	}
 
 	void Reset()
@@ -177,14 +179,26 @@ public class GrabIt : MonoBehaviour {
 		
 		m_targetRB = null;
 
+		if(m_hitPointObject == null){
+			m_hitPointObject = new GameObject("Point");
+		}
+
 		m_hitPointObject.transform.SetParent(null);
-		
+
 		if(m_lineRenderer != null)
 			m_lineRenderer.enabled = false;
 	}
 
 	void Grab()
 	{
+		if (m_hitPointObject == null){
+			m_hitPointObject = new GameObject("Point");
+		}
+
+		if (m_targetRB == null){
+			return;
+		}
+
 		Vector3 hitPointPos = m_hitPointObject.transform.position;
 		Vector3 dif = m_targetPos - hitPointPos;
 
@@ -202,7 +216,9 @@ public class GrabIt : MonoBehaviour {
 
 	void Rotate()
 	{
-		m_targetRB.transform.up = Vector3.up;
+		if (m_targetRB != null){
+			m_targetRB.transform.up = Vector3.up;
+		}
 		/*
 		if(Input.GetKey(m_rotatePitchPosKey)){
 			m_targetRB.AddTorque(  m_transform.right * m_angularSpeed );			
