@@ -7,10 +7,15 @@ public class Gameman : MonoBehaviour
     public float maxITime = 30;
 
     public float iTime = 30;
+
+    public GameObject IFrameUI;
+
+    private bool isUIActive;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        isUIActive = true;
     }
 
     // Update is called once per frame
@@ -37,6 +42,12 @@ public class Gameman : MonoBehaviour
         {
             SaveMaster.SyncLoad();
             iTime = maxITime;
+            this.isUIActive = true;
+            this.IFrameUI.SetActive(true);
+        }
+        else if(!freeze && this.isUIActive){
+            this.isUIActive = false;
+            this.IFrameUI.SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.F5)){

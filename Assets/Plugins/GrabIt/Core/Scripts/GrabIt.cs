@@ -137,6 +137,10 @@ public class GrabIt : MonoBehaviour {
 	
 	void Set(Rigidbody target , float distance)
 	{	
+		if (target == null){
+			return;
+		}
+
 		m_targetRB = target;
 		m_isHingeJoint = target.GetComponent<HingeJoint>() != null;		
 
