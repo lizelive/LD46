@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
+        if (Inman.I.a)
         {
             if (Physics.Raycast(pov.transform.position, pov.transform.forward, out var hitInfo) && hitInfo.distance < maxGrabDist)
             {

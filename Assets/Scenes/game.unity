@@ -330,7 +330,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1982117233787434271}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &222911350
+--- !u!64 &222911353
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -797,7 +797,10 @@ MonoBehaviour:
   right: {x: 0, y: 0}
   a: 0
   b: 0
+  x: 0
   sessionId: 
+  joinTime: 0
+  playTime: 300
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1698,6 +1701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1107166834}
   - component: {fileID: 1107166833}
+  - component: {fileID: 1107166835}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -1733,6 +1737,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1107166835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107166832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ba893a4d2817b94096d210997acbfc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deliveryLocation: {fileID: 0}
 --- !u!1001 &1225659893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2467,6 +2484,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1896628183084926879, guid: afe45bfc8438c8e43857ce5e3defde7a,
+        type: 3}
+      propertyPath: turnSpeed
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896628183084926879, guid: afe45bfc8438c8e43857ce5e3defde7a,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1896628183084926949, guid: afe45bfc8438c8e43857ce5e3defde7a,
         type: 3}
       propertyPath: saveIdentification
@@ -2481,6 +2508,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_impulseMagnitude
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896628184457715348, guid: afe45bfc8438c8e43857ce5e3defde7a,
+        type: 3}
+      propertyPath: m_collisionMask.m_Bits
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afe45bfc8438c8e43857ce5e3defde7a, type: 3}

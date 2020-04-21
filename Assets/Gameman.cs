@@ -21,6 +21,9 @@ public class Gameman : MonoBehaviour
 
         iTime-= Time.deltaTime;
         var freeze = iTime > 0;
+
+        freeze |= !Inman.I.HasPlayer;
+
         var failed = false;
 
         foreach (var need in allTheNeeds)
@@ -32,8 +35,8 @@ public class Gameman : MonoBehaviour
                 failed = true;
             }
         }
-
-        if (!freeze && failed)
+        failed &= !freeze;
+        if (failed)
         {
             SaveMaster.SyncLoad();
             iTime = maxITime;

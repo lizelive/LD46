@@ -30,12 +30,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         var input = new PlayerInput();
-        input.move.y = Input.GetAxis("Vertical");
-        input.move.x = Input.GetAxis("Horizontal");
 
 
-        input.rotation.x = Input.GetAxis("Mouse X");
-        input.rotation.y = -Input.GetAxis("Mouse Y");
+
+        input.move = Inman.I.left;
+        input.rotation = Inman.I.right;
 
         var move = moveSpeed*(transform.forward * input.move.y + transform.right * input.move.x);
         var rotX = input.rotation.x * Time.deltaTime * turnSpeed;
@@ -44,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
         transform.Rotate(0, rotX, 0);
 
-        camAngle = Mathf.Clamp(camAngle + rotY, -maxCameraAngle, maxCameraAngle);
+        camAngle = Mathf.Clamp(camAngle - rotY, -maxCameraAngle, maxCameraAngle);
 
 
         var rot = pov.transform.localEulerAngles;

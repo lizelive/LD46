@@ -65,6 +65,7 @@
      <Compile Include="Assets\Garbage.cs" />
      <Compile Include="Assets\GetBackHere.cs" />
      <Compile Include="Assets\Glass.cs" />
+     <Compile Include="Assets\GrabIt.cs" />
      <Compile Include="Assets\IClickable.cs" />
      <Compile Include="Assets\IEatSun.cs" />
      <Compile Include="Assets\Inman.cs" />

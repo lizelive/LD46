@@ -1,4 +1,6 @@
-﻿using Microsoft.Mixer;
+﻿using Lowscope.Saving;
+using Microsoft.Mixer;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,18 +11,30 @@ public class Inman : MonoBehaviour
     public string username;
     public Vector2 left;
     public Vector2 right;
+    
     public bool a;
     public bool b;
+    public bool x;
+
+
     public string sessionId = null;
+
+    public float joinTime;
+
+    public bool HasPlayer => !string.IsNullOrEmpty(sessionId);
+
 
     public const string LeftStick = "LStick";
     public const string RightStick = "RStick";
     public const string AButton = "A";
     public const string BButton = "B";
+    public const string XButton = "X";
+
 
     public const string JoinButton = "join";
+    public const string LeaveButton = "leave";
 
-
+    
     private InteractiveScene controlsScene;
 
     public void Start()
@@ -31,6 +45,13 @@ public class Inman : MonoBehaviour
         InteractivityManager.SingletonInstance.OnInteractiveJoystickControlEvent += OnInteractiveJoystickControlEvent;
         InteractivityManager.SingletonInstance.OnInteractiveButtonEvent += OnInteractiveButtonEvent;
         InteractivityManager.SingletonInstance.OnInteractiveMessageEvent += SingletonInstance_OnInteractiveMessageEvent;
+        InteractivityManager.SingletonInstance.OnParticipantStateChanged += SingletonInstance_OnParticipantStateChanged;
+    }
+
+    private void SingletonInstance_OnParticipantStateChanged(object sender, InteractiveParticipantStateChangedEventArgs e)
+    {
+        if (e.State == InteractiveParticipantState.Left || e.State == InteractiveParticipantState.InputDisabled)
+            RelinquishControl(e.Participant);
     }
 
     private void SingletonInstance_OnInteractiveMessageEvent(object sender, InteractiveMessageEventArgs @event)
@@ -48,12 +69,12 @@ public class Inman : MonoBehaviour
                 return;
 
             // p?.input?._event != "controller"
-            print("nmn " + @event.Message);
+            //print("nmn " + @event.Message);
             var e = p.input.param;
             if (e == null)
                 return;
 
-            var stickValue = new Vector2(e.x??0, e.y??0);
+            var stickValue = new Vector2(e.x??0, -e.y??0);
             var buttonValue = e.value == 1;
             if (e.ControlID == LeftStick)
                 left = stickValue;
@@ -69,49 +90,65 @@ public class Inman : MonoBehaviour
                 b = buttonValue;
             }
 
+            if (e.ControlID == XButton)
+            {
+                x = buttonValue;
+            }
+
         }
     }
 
+    InteractiveParticipant participant;
+
+    public float playTime = 300;
+
     private void OnInteractiveButtonEvent(object sender, InteractiveButtonEventArgs e)
     {
-        print($"b {e.ControlID}");
-
         var participant = e.Participant;
-        if (e.ControlID == JoinButton)
+        if (e.ControlID == JoinButton && (!HasPlayer || Time.time - joinTime >= playTime ))
         {
-            print("join it good");
-
             GiveControl(participant);
         }
 
         if (e.Participant.SessionID != sessionId)
             return;
         var value = e.IsPressed;
-        if (e.ControlID == AButton)
+
+        if (e.ControlID == LeaveButton)
         {
-            a = value;
+            RelinquishControl(participant);
         }
-        if (e.ControlID == BButton)
-        {
-            b = value;
-        }
+        //if (e.ControlID == AButton)
+        //{
+        //    a = value;
+        //}
+        //if (e.ControlID == BButton)
+        //{
+        //    b = value;
+        //}
+    }
+
+    private void RelinquishControl(InteractiveParticipant participant = null)
+    {
+        var group = InteractivityManager.SingletonInstance.GetGroup("default");
+        (participant??this.participant).Group = group;
+        sessionId = null;
+        SaveMaster.SyncSave();
     }
 
     private void GiveControl(InteractiveParticipant participant)
     {
+        
         var group = InteractivityManager.SingletonInstance.GetGroup("controlling");
         participant.Group = group;
+        SaveMaster.SyncSave();
 
-        //controlID: "crowdController"
-
-
-
+        this.participant = participant;
         sessionId = participant.SessionID;
-
-
+        username = participant.UserName ?? "user";
     }
-    [System.Serializable]
 
+    [System.Serializable]
     public class UwuJson
     {
         public string type;
@@ -121,23 +158,23 @@ public class Inman : MonoBehaviour
         public int seq;
         public bool discard;
     }
-    [System.Serializable]
 
+    [System.Serializable]
     public class Params
     {
         public string participantID;
         public Input input;
     }
-    [System.Serializable]
 
+    [System.Serializable]
     public class Input
     {
         public string _event;
         public Param param;
         public string controlID;
     }
-    [System.Serializable]
 
+    [System.Serializable]
     public class Param
     {
         public string _event;
@@ -151,8 +188,7 @@ public class Inman : MonoBehaviour
 
     private void OnInteractiveJoystickControlEvent(object sender, InteractiveJoystickEventArgs e)
     {
-
-        print($"j {e.ControlID}");
+        joinTime = Time.time;
         if (e.Participant.SessionID != sessionId)
             return;
     }
