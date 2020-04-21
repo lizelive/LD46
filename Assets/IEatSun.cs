@@ -60,12 +60,13 @@ public class IEatSun : MonoBehaviour
         var colors = new Color[dirs.Length];
         sh2.Evaluate(dirs, colors);
         iEats += colors.Average(it => it.grayscale);
+        */
 
         if (lightValue + 0.04f < iEats)
         {
             thankYou?.Play(transform.position);
         }
-        */
+
         need.Add(iEats * Time.deltaTime);
 
         lightValue = iEats;
