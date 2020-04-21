@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2326113749177589591}
   - component: {fileID: 2326113749177589544}
   - component: {fileID: 2326113749177589545}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 2326113749363661892}
   - component: {fileID: 2326113749363661890}
   - component: {fileID: 2326113749363661891}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
