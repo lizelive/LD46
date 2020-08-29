@@ -56,7 +56,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ClickNeedProvider.cs" />
-     <Compile Include="Assets\ControlCharacter.cs" />
      <Compile Include="Assets\FlipbookRender.cs" />
      <Compile Include="Assets\FlipbookTexture.cs" />
      <Compile Include="Assets\Food.cs" />
@@ -73,6 +72,7 @@
      <Compile Include="Assets\Need.cs" />
      <Compile Include="Assets\NeedViz.cs" />
      <Compile Include="Assets\Needy.cs" />
+     <Compile Include="Assets\Newspaper.cs" />
      <Compile Include="Assets\Plant.cs" />
      <Compile Include="Assets\Player.cs" />
      <Compile Include="Assets\PlayerController.cs" />

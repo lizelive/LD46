@@ -17,8 +17,6 @@ public class PlayerController : MonoBehaviour
     {
         uwu = GetComponent<CharacterController>();
         pov = GetComponentInChildren<Camera>();
-
-        Cursor.lockState = CursorLockMode.Locked;
     }
     struct PlayerInput
     {
@@ -33,8 +31,8 @@ public class PlayerController : MonoBehaviour
 
 
 
-        input.move = Inman.I.left;
-        input.rotation = Inman.I.right;
+        input.move = Inman.I.move;
+        input.rotation = Inman.I.turn;
 
         var move = moveSpeed*(transform.forward * input.move.y + transform.right * input.move.x);
         var rotX = input.rotation.x * Time.deltaTime * turnSpeed;

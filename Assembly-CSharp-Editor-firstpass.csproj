@@ -327,14 +327,14 @@
  <Reference Include="UnityEditor.LinuxStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.10f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
  </Reference>
- <Reference Include="ICSharpCode.NRefactory">
- <HintPath>C:/Users/Lize/source/repos/LD46/LD46/Library/PackageCache/com.unity.render-pipelines.core@7.3.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
- </Reference>
  <Reference Include="Newtonsoft.Json">
  <HintPath>C:/Users/Lize/source/repos/LD46/LD46/Assets/Plugins/MixerInteractive/Source/DLLs/Win32/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
  <HintPath>C:/Users/Lize/source/repos/LD46/LD46/Assets/Plugins/MixerInteractive/Source/DLLs/Win32/websocket-sharp.dll</HintPath>
+ </Reference>
+ <Reference Include="ICSharpCode.NRefactory">
+ <HintPath>C:/Users/Lize/source/repos/LD46/LD46/Library/PackageCache/com.unity.render-pipelines.core@7.3.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>C:/Users/Lize/source/repos/LD46/LD46/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>

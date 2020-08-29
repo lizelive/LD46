@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Inman.I.a)
+        if (Inman.I.use)
         {
             if (Physics.Raycast(pov.transform.position, pov.transform.forward, out var hitInfo) && hitInfo.distance < maxGrabDist)
             {

@@ -107,7 +107,7 @@ public class GrabIt : MonoBehaviour {
 			}
 			
 
-			if(Inman.I.x ){				
+			if(Inman.I.drop ){				
 				Reset();
 				m_grabbing = false;
 			}else if ( Input.GetMouseButtonDown(1) ){
@@ -119,7 +119,7 @@ public class GrabIt : MonoBehaviour {
 		else
 		{
 
-			if(Inman.I.b)
+			if(Inman.I.grab)
 			{
 				RaycastHit hitInfo;
 				if(Physics.Raycast(m_transform.position , m_transform.forward , out hitInfo , m_grabMaxDistance , m_collisionMask ))

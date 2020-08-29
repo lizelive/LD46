@@ -9,12 +9,12 @@ public class Inman : MonoBehaviour
 {
     public static Inman I;
     public string username;
-    public Vector2 left;
-    public Vector2 right;
+    public Vector2 move;
+    public Vector2 turn;
     
-    public bool a;
-    public bool b;
-    public bool x;
+    public bool use;
+    public bool grab;
+    public bool drop;
 
 
     public string sessionId = null;
@@ -26,9 +26,9 @@ public class Inman : MonoBehaviour
 
     public const string LeftStick = "LStick";
     public const string RightStick = "RStick";
-    public const string AButton = "A";
-    public const string BButton = "B";
-    public const string XButton = "X";
+    public const string UseButton = "A";
+    public const string GrabButton = "LB";
+    public const string DropButton = "B";
 
 
     public const string JoinButton = "join";
@@ -77,22 +77,22 @@ public class Inman : MonoBehaviour
             var stickValue = new Vector2(e.x??0, -e.y??0);
             var buttonValue = e.value == 1;
             if (e.ControlID == LeftStick)
-                left = stickValue;
+                move = stickValue;
             if (e.ControlID == RightStick)
-                right = stickValue;
+                turn = stickValue;
 
-            if (e.ControlID == AButton)
+            if (e.ControlID == UseButton)
             {
-                a = buttonValue;
+                use = buttonValue;
             }
-            if (e.ControlID == BButton)
+            if (e.ControlID == GrabButton)
             {
-                b = buttonValue;
+                grab = buttonValue;
             }
 
-            if (e.ControlID == XButton)
+            if (e.ControlID == DropButton)
             {
-                x = buttonValue;
+                drop = buttonValue;
             }
 
         }
@@ -128,7 +128,7 @@ public class Inman : MonoBehaviour
         //}
     }
 
-    private void RelinquishControl(InteractiveParticipant participant = null)
+    public void RelinquishControl(InteractiveParticipant participant = null)
     {
         var group = InteractivityManager.SingletonInstance.GetGroup("default");
         (participant??this.participant).Group = group;
@@ -138,14 +138,13 @@ public class Inman : MonoBehaviour
 
     private void GiveControl(InteractiveParticipant participant)
     {
-        
+        SaveMaster.SyncLoad();
         var group = InteractivityManager.SingletonInstance.GetGroup("controlling");
         participant.Group = group;
-        SaveMaster.SyncSave();
-
+        this.joinTime = Time.time;
         this.participant = participant;
         sessionId = participant.SessionID;
-        username = participant.UserName ?? "user";
+        username = participant.UserName ?? "HUMAN";
     }
 
     [System.Serializable]
